@@ -1,5 +1,5 @@
 # GSQL Syntax highlighting #
-GSQL is what Tigergraph uses as it's graph query language.
+GSQL is what [Tigergraph](http://www.tigergraph.com/) uses as it's graph query language.
 
 I've based this off [sql.vim](https://www.vim.org/scripts/script.php?script_id=3702).
 
