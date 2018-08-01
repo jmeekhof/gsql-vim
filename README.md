@@ -7,6 +7,6 @@ I've based this off [sql.vim](https://www.vim.org/scripts/script.php?script_id=3
 Use your favorite plugin manager.
 
 I use [vim-plug](https://github.com/junegunn/vim-plug):
-```
+```vim
 Plug 'jmeekhof/gsql-vim'
 ```
