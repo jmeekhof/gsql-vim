@@ -40,6 +40,7 @@ syn  keyword    gsqlSpecial      false null true
 "    Comments
 syn  region     gsqlComment      start="/\*" end="\*/" contains=gsqlTodo
 syn  match      gsqlComment      "//.*$" contains=gsqlTodo
+syn  match      gsqlComment      "#.*$" contains=gsqlTodo
 
 " Variables
 syn  match      gsqlVariable     "$\w\+"
