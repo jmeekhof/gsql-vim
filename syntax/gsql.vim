@@ -47,9 +47,9 @@ syn  keyword    gsqlType         contained bool double datetime fixed_binary flo
 "    ToDo       style
 syn  keyword    gsqlTodo         contained FIXME TODO
 "    Comments
-syn  region     gsqlComment      start="/\*" end="\*/" contains=gsqlTodo
-syn  match      gsqlComment      "//.*$" contains=gsqlTodo
-syn  match      gsqlComment      "#.*$" contains=gsqlTodo
+syn  region     gsqlComment      start="\v/\*" end="\v\*/" contains=gsqlTodo
+syn  match      gsqlComment      "\v//.*$" contains=gsqlTodo
+syn  match      gsqlComment      "\v#.*$" contains=gsqlTodo
 
 " Variables
 syn  match      gsqlVariable     "\v\$\w+"
