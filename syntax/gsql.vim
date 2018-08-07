@@ -90,7 +90,7 @@ syn  match      gsqlFunction     "\v<(to_datetime|to_string|trim|upper|year)\(@=
 
 " Statement
 syn  keyword    gsqlStatement    alter delete drop grant select
-syn  match      gsqlStatement    "\<\(replace\|create\)\>"
+syn  match      gsqlStatement    "\v<(replace|create)>"
 
 "contained matchgroup=gsqlType
 
