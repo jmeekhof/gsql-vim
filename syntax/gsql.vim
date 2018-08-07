@@ -57,6 +57,7 @@ syn  match      gsqlVariable     -\v\$"\w+"-
 
 "    Strings
 syn  region     gsqlString       start=/\v"/ skip=/\v\\./ end=/\v"/ contains=gsqlVariable
+"TODO Check if gsql does variable interpolation
 syn  region     gsqlString       start=/\v'/ skip=/\v\\./ end=/\v'/
 
 syn  match      gsqlNumber       "\v<\d+>"
