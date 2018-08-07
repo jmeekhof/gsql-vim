@@ -25,22 +25,19 @@ syn  keyword    gsqlKeyword      returns reverse_edge run select set stats to
 syn  keyword    gsqlKeyword      tuple typedef undirected use using where with
 syn  keyword    gsqlKeyword      vertex
 "    Operators
-"syn  match      gsqlOperator     "\v\*"
-"syn  match      gsqlOperator     "\v/"
-"syn  match      gsqlOperator     "\v\+"
-"syn  match      gsqlOperator     "\v-"
-"syn  match      gsqlOperator     "\v\%"
-"syn  match      gsqlOperator     "\v\<\<"
-"syn  match      gsqlOperator     "\v>>"
-"syn  match      gsqlOperator     "\v\&"
-"syn  match      gsqlOperator     "\v|"
-"syn  keyword    gsqlOperator     != < <= == > >=
-syn  match      gsqlOperator "\v\!\="
-syn  match      gsqlOperator "\v\=\="
-syn  match      gsqlOperator "\v\<\="
-syn  match      gsqlOperator "\v\>\="
-syn  match      gsqlOperator "\v\<"
-syn  match      gsqlOperator "\v\>"
+syn  match      gsqlOperator     "\v/"
+syn  match      gsqlOperator     "\v\+"
+syn  match      gsqlOperator     "\v-"
+syn  match      gsqlOperator     "\v\%"
+syn  match      gsqlOperator     "\v\&"
+syn  match      gsqlOperator     "\v\|"
+syn  match      gsqlOperator     "\v\*"
+syn  match      gsqlOperator     "\v\<"
+syn  match      gsqlOperator     "\v\>"
+syn  match      gsqlOperator     "\v\!\="
+syn  match      gsqlOperator     "\v\=\="
+syn  match      gsqlOperator     "\v\<\="
+syn  match      gsqlOperator     "\v\>\="
 syn  keyword    gsqlOperator     and between in is like not or
 "    Types
 syn  keyword    gsqlType         contained bool double datetime fixed_binary float int jsonarray jsonobject string uint
