@@ -76,17 +76,17 @@ syn  match      gsqlTypeMatch    contained "\v((^\|[,(]\)\s*\S+\s+)@<=\w+\(\s*([
 syn  region     gsqlTypeRegion   matchgroup=gsqlParen start="\v(create\s+vertex\s+[^(]+\s+)@<=\(" end="\v\)" contains=@gsqlALL,gsqlTypeMatch
 syn  region     gsqlTypeRegion   matchgroup=gsqlParen start="\v(create\s+(directed)?\s*edge\s+[^(]+\s+)@<=\(" end="\v\)" contains=@gsqlALL,gsqlTypeMatch
 "    Functions
-syn  match      gsqlFunction     "\<\(abs\|acos\|asin\|atan2\|atan\|ceil\)(\@="
-syn  match      gsqlFunction     "\<\(containsKey\|cos\|cosh\|datetime_add\)(\@="
-syn  match      gsqlFunction     "\<\(datetime_diff\|datetime_format\|datetime_sub\)(\@="
-syn  match      gsqlFunction     "\<\(datetime_to_epoch\|day\|epoch_to_datetime\)(\@="
-syn  match      gsqlFunction     "\<\(exp\|float_to_int\|floor\|fmod\|getBool\)(\@="
-syn  match      gsqlFunction     "\<\(getDouble\|getInt\|getJsonArray\|getJsonObject\)(\@="
-syn  match      gsqlFunction     "\<\(getString\|hour\|ldexp\|log10\|log\|lower\)(\@="
-syn  match      gsqlFunction     "\<\(minute\|month\|now\|parse_json_array\)(\@="
-syn  match      gsqlFunction     "\<\(parse_json_object\|pow\|second\|sin\|sinh\)(\@="
-syn  match      gsqlFunction     "\<\(size\|sqrt\|str_to_int\|tan\|tanh\)(\@="
-syn  match      gsqlFunction     "\<\(to_datetime\|to_string\|trim\|upper\|year\)(\@="
+syn  match      gsqlFunction     "\v<(abs|acos|asin|atan2|atan|ceil)\(@="
+syn  match      gsqlFunction     "\v<(containsKey|cos|cosh|datetime_add)\(@="
+syn  match      gsqlFunction     "\v<(datetime_diff|datetime_format|datetime_sub)\(@="
+syn  match      gsqlFunction     "\v<(datetime_to_epoch|day|epoch_to_datetime)\(@="
+syn  match      gsqlFunction     "\v<(exp|float_to_int|floor|fmod|getBool)\(@="
+syn  match      gsqlFunction     "\v<(getDouble|getInt|getJsonArray|getJsonObject)\(@="
+syn  match      gsqlFunction     "\v<(getString|hour|ldexp|log10|log|lower)\(@="
+syn  match      gsqlFunction     "\v<(minute|month|now|parse_json_array)\(@="
+syn  match      gsqlFunction     "\v<(parse_json_object|pow|second|sin|sinh)\(@="
+syn  match      gsqlFunction     "\v<(size|sqrt|str_to_int|tan|tanh)\(@="
+syn  match      gsqlFunction     "\v<(to_datetime|to_string|trim|upper|year)\(@="
 
 " Statement
 syn  keyword    gsqlStatement    alter delete drop grant select
