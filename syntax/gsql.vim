@@ -43,7 +43,8 @@ syn  match      gsqlComment      "//.*$" contains=gsqlTodo
 syn  match      gsqlComment      "#.*$" contains=gsqlTodo
 
 " Variables
-syn  match      gsqlVariable     "$\w\+"
+syn  match      gsqlVariable     "\v\$\w+"
+syn  match      gsqlVariable     -\v\$"\w+"-
 
 "    Strings
 syn  region     gsqlString       start=+"+ skip=+\\\\\|\\"+ end=+"+ contains=gsqlVariable
