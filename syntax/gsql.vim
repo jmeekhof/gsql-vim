@@ -56,8 +56,8 @@ syn  match      gsqlVariable     "\v\$\w+"
 syn  match      gsqlVariable     -\v\$"\w+"-
 
 "    Strings
-syn  region     gsqlString       start=+"+ skip=+\\\\\|\\"+ end=+"+ contains=gsqlVariable
-syn  region     gsqlString       start=+'+ skip=+\\\\\|\\'+ end=+'+ contains=gsqlVariable
+syn  region     gsqlString       start=/\v"/ skip=/\v\\./ end=/\v"/ contains=gsqlVariable
+syn  region     gsqlString       start=/\v'/ skip=/\v\\./ end=/\v'/
 
 syn  match      gsqlNumber       "\v<\d+>"
 syn  match      gsqlNumber       "\v<\d+\.\d+>"
