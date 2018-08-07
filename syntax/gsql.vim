@@ -59,11 +59,11 @@ syn  match      gsqlVariable     -\v\$"\w+"-
 syn  region     gsqlString       start=+"+ skip=+\\\\\|\\"+ end=+"+ contains=gsqlVariable
 syn  region     gsqlString       start=+'+ skip=+\\\\\|\\'+ end=+'+ contains=gsqlVariable
 
-syn  match      gsqlNumber       "-\=\<[0-9]*\>"
-syn  match      gsqlNumber       "-\=\<[0-9]*\.[0-9]*\>"
-syn  match      gsqlNumber       "-\=\<[0-9][0-9]*e[+-]\=[0-9]*\>"
-syn  match      gsqlNumber       "-\=\<[0-9]*\.[0-9]*e[+-]\=[0-9]*\>"
-syn  match      gsqlNumber       "\<0x[abcdef0-9]*\>"
+syn  match      gsqlNumber       "\v<\d+>"
+syn  match      gsqlNumber       "\v<\d+\.\d+>"
+syn  match      gsqlNumber       "\v<\d\d+e[+-]\d+>"
+syn  match      gsqlNumber       "\v<\d+\.\d+e[+-]\d+>"
+syn  match      gsqlNumber       "\v<0x[abcdef0-9]+>"
 
 
 " Correct paren, bracket and brace usage
