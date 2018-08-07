@@ -19,7 +19,7 @@ syntax  keyword    gsqlSpecial      false null true
 
 " Keywords
 syntax  keyword    gsqlKeyword      bag compress define directed distributed drop
-syntax  keyword    gsqlKeyword      edge for from from graph install job list
+syntax  keyword    gsqlKeyword      edge filename for from graph header install job list
 syntax  keyword    gsqlKeyword      loading map primary_id print query return
 syntax  keyword    gsqlKeyword      returns reverse_edge run select set stats to
 syntax  keyword    gsqlKeyword      tuple typedef undirected use using where with
