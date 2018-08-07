@@ -9,34 +9,43 @@ endif
 syn case ignore
 
 syn  cluster    gsqlALL          contains=TOP
-
-" Keywords
-syn  keyword    gsqlKeyword      bag compress define directed distributed double drop for from from graph install job list loading map primary_id print query return returns reverse_edge run select set stats to tuple typedef undirected use using where with
-syn  keyword    gsqlKeyword      "<edge\>"
-syn  keyword    gsqlKeyword      "<vertex\>"
-"    Types
-syn  keyword    gsqlType         contained bool datetime fixed_binary float int jsonarray jsonobject string uint
 "    Errors
 syn  match      gsqlError        ")"       " Lonely paren
 syn  match      gsqlError        "]"
 syn  match      gsqlError        "}"
 syn  match      gsqlError        ",\(\_\s*[;)]\)\@="                            "             Comma before a closing paren
-"    ToDo       style
-syn  keyword    gsqlTodo         contained FIXME TODO
-"    Operators
-syn  match      gsqlOperator     "\v\*"
-syn  match      gsqlOperator     "\v/"
-syn  match      gsqlOperator     "\v\%"
-syn  match      gsqlOperator     "\v\+"
-syn  match      gsqlOperator     "\v-"
-syn  match      gsqlOperator     "\v<<"
-syn  match      gsqlOperator     "\v>>"
-syn  match      gsqlOperator     "\v&"
-syn  match      gsqlOperator     "\v|"
-syn  keyword    gsqlOperator     != < <= == > >=
-syn  keyword    gsqlOperator     and between in is like not or
 "    Special    words
 syn  keyword    gsqlSpecial      false null true
+
+" Keywords
+syn  keyword    gsqlKeyword      bag compress define directed distributed drop
+syn  keyword    gsqlKeyword      edge for from from graph install job list
+syn  keyword    gsqlKeyword      loading map primary_id print query return
+syn  keyword    gsqlKeyword      returns reverse_edge run select set stats to
+syn  keyword    gsqlKeyword      tuple typedef undirected use using where with
+syn  keyword    gsqlKeyword      vertex
+"    Operators
+"syn  match      gsqlOperator     "\v\*"
+"syn  match      gsqlOperator     "\v/"
+"syn  match      gsqlOperator     "\v\+"
+"syn  match      gsqlOperator     "\v-"
+"syn  match      gsqlOperator     "\v\%"
+"syn  match      gsqlOperator     "\v\<\<"
+"syn  match      gsqlOperator     "\v>>"
+"syn  match      gsqlOperator     "\v\&"
+"syn  match      gsqlOperator     "\v|"
+"syn  keyword    gsqlOperator     != < <= == > >=
+syn  match      gsqlOperator "\v\!\="
+syn  match      gsqlOperator "\v\=\="
+syn  match      gsqlOperator "\v\<\="
+syn  match      gsqlOperator "\v\>\="
+syn  match      gsqlOperator "\v\<"
+syn  match      gsqlOperator "\v\>"
+syn  keyword    gsqlOperator     and between in is like not or
+"    Types
+syn  keyword    gsqlType         contained bool double datetime fixed_binary float int jsonarray jsonobject string uint
+"    ToDo       style
+syn  keyword    gsqlTodo         contained FIXME TODO
 "    Comments
 syn  region     gsqlComment      start="/\*" end="\*/" contains=gsqlTodo
 syn  match      gsqlComment      "//.*$" contains=gsqlTodo
@@ -88,21 +97,21 @@ syn  match      gsqlStatement    "\<\(replace\|create\)\>"
 "contained matchgroup=gsqlType
 
 
-hi  def  link  gsqlComment        Comment
-hi  def  link  gsqlError          Error
-hi  def  link  gsqlFunction       Function
-hi  def  link  gsqlKeyword        Keyword
-hi  def  link  gsqlNumber         Number
-hi  def  link  gsqlOperator       Operator
-hi  def  link  gsqlParen          Comment
-hi  def  link  gsqlParenEmpty     Operator
-hi  def  link  gsqlParenFunction  Function
-hi  def  link  gsqlSpecial        Special
-hi  def  link  gsqlStatement      Statement
-hi  def  link  gsqlString         String
-hi  def  link  gsqlTodo           Todo
-hi  def  link  gsqlType           Type
-hi def link gsqlVariable Identifier
+highlight    link  gsqlComment        Comment
+highlight    link  gsqlError          Error
+highlight    link  gsqlFunction       Function
+highlight    link  gsqlKeyword        Keyword
+highlight    link  gsqlNumber         Number
+highlight    link  gsqlOperator       Operator
+highlight    link  gsqlParen          Comment
+highlight    link  gsqlParenEmpty     Operator
+highlight    link  gsqlParenFunction  Function
+highlight    link  gsqlSpecial        Special
+highlight    link  gsqlStatement      Statement
+highlight    link  gsqlString         String
+highlight    link  gsqlTodo           Todo
+highlight    link  gsqlType           Type
+highlight link gsqlVariable Identifier
 
 
 let b:current_syntax = "gsql"
