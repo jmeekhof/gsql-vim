@@ -10,10 +10,10 @@ syntax case ignore
 
 syntax  cluster    gsqlALL          contains=TOP
 " Errors
-syntax  match      gsqlError        ")"       " Lonely paren
-syntax  match      gsqlError        "]"
-syntax  match      gsqlError        "}"
-syntax  match      gsqlError        ",\(\_\s*[;)]\)\@=" "Comma before a closing paren
+syntax  match      gsqlError        "\v\)"       " Lonely paren
+syntax  match      gsqlError        "\v\]"
+syntax  match      gsqlError        "\v\}"
+syntax  match      gsqlError        "\v,(\_\s*[;\)])@=" "Comma before a closing paren
 " Special    words
 syntax  keyword    gsqlSpecial      false null true
 
