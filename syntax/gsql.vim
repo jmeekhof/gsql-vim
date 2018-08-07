@@ -39,8 +39,9 @@ syntax  match      gsqlOperator     "\v\=\="
 syntax  match      gsqlOperator     "\v\<\="
 syntax  match      gsqlOperator     "\v\>\="
 syntax  keyword    gsqlOperator     and between in is like not or
-"    Types
-syntax  keyword    gsqlType         contained bool double datetime fixed_binary float int jsonarray jsonobject string uint
+" Types
+syntax  keyword    gsqlType         contained bool double datetime fixed_binary
+syntax  keyword    gsqlType         contained float int jsonarray jsonobject string uint
 "    ToDo       style
 syntax  keyword    gsqlTodo         contained FIXME TODO
 "    Comments
