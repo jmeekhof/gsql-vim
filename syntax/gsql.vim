@@ -42,9 +42,9 @@ syntax  keyword    gsqlOperator     and between in is like not or
 " Types
 syntax  keyword    gsqlType         contained bool double datetime fixed_binary
 syntax  keyword    gsqlType         contained float int jsonarray jsonobject string uint
-"    ToDo       style
+" ToDo       style
 syntax  keyword    gsqlTodo         contained FIXME TODO
-"    Comments
+" Comments
 syntax  region     gsqlComment      start="\v/\*" end="\v\*/" contains=gsqlTodo
 syntax  match      gsqlComment      "\v//.*$" contains=gsqlTodo
 syntax  match      gsqlComment      "\v#.*$" contains=gsqlTodo
@@ -66,13 +66,13 @@ syntax  match      gsqlNumber       "\v<0x[abcdef0-9]+>"
 
 
 " Correct paren, bracket and brace usage
-syntax  region     gsqlParens       transparent matchgroup=gsqlParen start="(" end=")"
-syntax  region     gsqlParens       transparent matchgroup=gsqlParen start="{" end="}"
-syntax  region     gsqlParens       transparent matchgroup=gsqlParen start="\[" end="\]"
-syntax  match      gsqlParensEmpty  "()"
+syntax  region     gsqlParens       transparent matchgroup=gsqlParen start="\v\(" end="\v\)"
+syntax  region     gsqlParens       transparent matchgroup=gsqlParen start="\v\{" end="\v\}"
+syntax  region     gsqlParens       transparent matchgroup=gsqlParen start="\v\[" end="\v\]"
+syntax  match      gsqlParensEmpty  "\v\(\)"
 syntax  region     gsqlParens       transparent matchgroup=gsqlParenFunc start="\v(<\w+>)@<=\(" end="\v\)"
 
-syntax  region     gsqlTypeParens   contained matchgroup=gsqlType start="(" end=")" contains=@gsqlALL
+syntax  region     gsqlTypeParens   contained matchgroup=gsqlType start="\v\(" end="\v\)" contains=@gsqlALL
 syntax  match      gsqlTypeMatch    contained "\v((^|[,(]\)\s*\S+\s+)@<=\w+\(\s*([^)]+))?" contains=gsqlType,gsqlTypeParens
 syntax  region     gsqlTypeRegion   matchgroup=gsqlParen start="\v(create\s+vertex\s+[^(]+\s+)@<=\(" end="\v\)" contains=@gsqlALL,gsqlTypeMatch
 syntax  region     gsqlTypeRegion   matchgroup=gsqlParen start="\v(create\s+(directed)?\s*edge\s+[^(]+\s+)@<=\(" end="\v\)" contains=@gsqlALL,gsqlTypeMatch
