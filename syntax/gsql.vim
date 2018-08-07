@@ -72,7 +72,7 @@ syn  match      gsqlParensEmpty  "()"
 syn  region     gsqlParens       transparent matchgroup=gsqlParenFunc start="\(\<\w\+\>\)\@<=(" end=")"
 
 syn  region     gsqlTypeParens   contained matchgroup=gsqlType start="(" end=")" contains=@gsqlALL
-syn  match      gsqlTypeMatch    contained "\(\(^\|[,(]\)\s*\S\+\s\+\)\@<=\w\+\(\s*([^)]\+)\)\?" contains=gsqlType,gsqlTypeParens
+syn  match      gsqlTypeMatch    contained "\v((^\|[,(]\)\s*\S+\s+)@<=\w+\(\s*([^)]+))?" contains=gsqlType,gsqlTypeParens
 syn  region     gsqlTypeRegion   matchgroup=gsqlParen start="\v(create\s+vertex\s+[^(]+\s+)@<=\(" end="\v\)" contains=@gsqlALL,gsqlTypeMatch
 syn  region     gsqlTypeRegion   matchgroup=gsqlParen start="\v(create\s+(directed)?\s*edge\s+[^(]+\s+)@<=\(" end="\v\)" contains=@gsqlALL,gsqlTypeMatch
 "    Functions
