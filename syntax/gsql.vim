@@ -52,6 +52,7 @@ syntax  match      gsqlComment      "\v#.*$" contains=gsqlTodo
 " Variables
 syntax  match      gsqlVariable     "\v\$\w+"
 syntax  match      gsqlVariable     -\v\$"\w+"-
+syntax  match      gsqlVariable     "\v\@{1,2}\w+"
 
 "    Strings
 syntax  region     gsqlString       start=/\v"/ skip=/\v\\./ end=/\v"/ contains=gsqlVariable
