@@ -43,7 +43,7 @@ syntax  match      gsqlOperator     "\v\>\="
 syntax  keyword    gsqlOperator     and between in is like not or
 " Types
 syntax  keyword    gsqlType         bool double datetime fixed_binary
-syntax  keyword    gsqlType         float int jsonarray jsonobject string uint
+syntax  keyword    gsqlType         float int jsonarray jsonobject string uint vertex edge
 " Accumulator Types
 syntax  keyword    gsqlType         andaccum arrayaccum avgaccum bagaccum bitwiseandaccum
 syntax  keyword    gsqlType         bitwiseoraccum groupbyaccum heapaccum listaccum
