@@ -23,7 +23,7 @@ syntax  keyword    gsqlKeyword      edge filename for from graph header install 
 syntax  keyword    gsqlKeyword      loading map primary_id post_accum post-accum print query return
 syntax  keyword    gsqlKeyword      returns reverse_edge run select set stats temp_table to
 syntax  keyword    gsqlKeyword      tuple typedef undirected use using where with quote
-syntax  keyword    gsqlKeyword      values vertex
+syntax  keyword    gsqlKeyword      values vertex user_defined_header separator
 " Operators
 syntax  match      gsqlOperator     "\v/"
 syntax  match      gsqlOperator     "\v\+"
