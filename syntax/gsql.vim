@@ -27,6 +27,8 @@ syntax  keyword    gsqlKeyword      values vertex user_defined_header separator
 " Operators
 syntax  match      gsqlOperator     "\v/"
 syntax  match      gsqlOperator     "\v\+"
+syntax  match      gsqlOperator     "\v\+\="
+syntax  match      gsqlOperator     "\v\="
 syntax  match      gsqlOperator     "\v-"
 syntax  match      gsqlOperator     "\v\%"
 syntax  match      gsqlOperator     "\v\&"
