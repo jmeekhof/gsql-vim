@@ -98,6 +98,7 @@ syntax  match      gsqlFunction     "\v(isdirected)\(@="
 " Statement
 syntax  keyword    gsqlStatement    alter delete drop grant select
 syntax  match      gsqlStatement    "\v<(replace|create)>"
+syntax  keyword    gsqlStatement    union intersect minus
 
 highlight  link  gsqlComment        Comment
 highlight  link  gsqlError          Error
