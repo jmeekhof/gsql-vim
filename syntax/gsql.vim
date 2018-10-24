@@ -104,6 +104,8 @@ syntax  match      gsqlFunction     "\v(isdirected)\(@="
 syntax  keyword    gsqlStatement    alter delete drop grant select
 syntax  match      gsqlStatement    "\v<(replace|create)>"
 syntax  keyword    gsqlStatement    union intersect minus
+" Control flow statements
+syntax  keyword    gsqlStatement    case do else end if then when while
 
 highlight  link  gsqlComment        Comment
 highlight  link  gsqlError          Error
