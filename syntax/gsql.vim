@@ -18,15 +18,17 @@ syntax  match      gsqlError        "\v,(\_\s*[;\)])@=" "Comma before a closing 
 syntax  keyword    gsqlSpecial      false null true
 
 " Keywords
-syntax  keyword    gsqlKeyword      bag compress define directed distributed drop
+syntax  keyword    gsqlKeyword      accum bag compress define directed distributed drop
 syntax  keyword    gsqlKeyword      edge filename for from graph header install job list
-syntax  keyword    gsqlKeyword      loading map primary_id print query return
-syntax  keyword    gsqlKeyword      returns reverse_edge run select set stats to
-syntax  keyword    gsqlKeyword      tuple typedef undirected use using where with
-syntax  keyword    gsqlKeyword      vertex
+syntax  keyword    gsqlKeyword      loading map primary_id post_accum post-accum print query return
+syntax  keyword    gsqlKeyword      returns reverse_edge run select set stats temp_table to
+syntax  keyword    gsqlKeyword      tuple typedef undirected use using where with quote
+syntax  keyword    gsqlKeyword      values vertex user_defined_header separator
 " Operators
 syntax  match      gsqlOperator     "\v/"
 syntax  match      gsqlOperator     "\v\+"
+syntax  match      gsqlOperator     "\v\+\="
+syntax  match      gsqlOperator     "\v\="
 syntax  match      gsqlOperator     "\v-"
 syntax  match      gsqlOperator     "\v\%"
 syntax  match      gsqlOperator     "\v\&"
@@ -40,8 +42,12 @@ syntax  match      gsqlOperator     "\v\<\="
 syntax  match      gsqlOperator     "\v\>\="
 syntax  keyword    gsqlOperator     and between in is like not or
 " Types
-syntax  keyword    gsqlType         contained bool double datetime fixed_binary
-syntax  keyword    gsqlType         contained float int jsonarray jsonobject string uint
+syntax  keyword    gsqlType         bool double datetime fixed_binary
+syntax  keyword    gsqlType         float int jsonarray jsonobject string uint vertex edge
+" Accumulator Types
+syntax  keyword    gsqlType         andaccum arrayaccum avgaccum bagaccum bitwiseandaccum
+syntax  keyword    gsqlType         bitwiseoraccum groupbyaccum heapaccum listaccum
+syntax  keyword    gsqlType         mapaccum maxaccum minaccum oraccum setaccum sumaccum
 " ToDo       style
 syntax  keyword    gsqlTodo         contained FIXME TODO
 " Comments
@@ -52,6 +58,7 @@ syntax  match      gsqlComment      "\v#.*$" contains=gsqlTodo
 " Variables
 syntax  match      gsqlVariable     "\v\$\w+"
 syntax  match      gsqlVariable     -\v\$"\w+"-
+syntax  match      gsqlVariable     "\v\@{1,2}\w+"
 
 "    Strings
 syntax  region     gsqlString       start=/\v"/ skip=/\v\\./ end=/\v"/ contains=gsqlVariable
@@ -88,10 +95,19 @@ syntax  match      gsqlFunction     "\v<(minute|month|now|parse_json_array)\(@="
 syntax  match      gsqlFunction     "\v<(parse_json_object|pow|second|sin|sinh)\(@="
 syntax  match      gsqlFunction     "\v<(size|sqrt|str_to_int|tan|tanh)\(@="
 syntax  match      gsqlFunction     "\v<(to_datetime|to_string|trim|upper|year)\(@="
+" Vertex Functions
+syntax  match      gsqlFunction     "\v(outdegree|neighbors|neighborattribute|edgeAttribute|filter)\@="
+" Tokenizer Function
+syntax  match      gsqlFunction     "\v<(gsql_reverse|gsql_concat|gsql_split_by_space|gsql_to_bool|gsql_to_uint|gsql_to_int|gsql_ts_to_epoch_seconds|gsql_current_time_epoch|flatten|flatten_json_array|split)\(@="
+" Edge Functions
+syntax  match      gsqlFunction     "\v(isdirected)\(@="
 
 " Statement
 syntax  keyword    gsqlStatement    alter delete drop grant select
 syntax  match      gsqlStatement    "\v<(replace|create)>"
+syntax  keyword    gsqlStatement    union intersect minus
+" Control flow statements
+syntax  keyword    gsqlStatement    case do else end if then when while
 
 highlight  link  gsqlComment        Comment
 highlight  link  gsqlError          Error
