@@ -83,12 +83,17 @@ syntax  match      gsqlFunction     "\v<(datetime_diff|datetime_format|datetime_
 syntax  match      gsqlFunction     "\v<(datetime_to_epoch|day|epoch_to_datetime)\(@="
 syntax  match      gsqlFunction     "\v<(exp|float_to_int|floor|fmod|getBool)\(@="
 syntax  match      gsqlFunction     "\v<(getDouble|getInt|getJsonArray|getJsonObject)\(@="
-syntax  match      gsqlFunction     "\v<(gsql_reverse|gsql_concat|gsql_split_by_space|gsql_to_bool|gsql_to_uint|gsql_to_int|gsql_ts_to_epoch_seconds|gsql_current_time_epoch|flatten|flatten_json_array|split)\(@="
 syntax  match      gsqlFunction     "\v<(getString|hour|ldexp|log10|log|lower)\(@="
 syntax  match      gsqlFunction     "\v<(minute|month|now|parse_json_array)\(@="
 syntax  match      gsqlFunction     "\v<(parse_json_object|pow|second|sin|sinh)\(@="
 syntax  match      gsqlFunction     "\v<(size|sqrt|str_to_int|tan|tanh)\(@="
 syntax  match      gsqlFunction     "\v<(to_datetime|to_string|trim|upper|year)\(@="
+" Vertex Functions
+syntax  match      gsqlFunction     "\v(outdegree|neighbors|neighborattribute|edgeAttribute|filter)\@="
+" Tokenizer Function
+syntax  match      gsqlFunction     "\v<(gsql_reverse|gsql_concat|gsql_split_by_space|gsql_to_bool|gsql_to_uint|gsql_to_int|gsql_ts_to_epoch_seconds|gsql_current_time_epoch|flatten|flatten_json_array|split)\(@="
+" Edge Functions
+syntax  match      gsqlFunction     "\v(isdirected)\(@="
 
 " Statement
 syntax  keyword    gsqlStatement    alter delete drop grant select
