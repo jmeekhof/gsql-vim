@@ -20,10 +20,10 @@ syntax  keyword    gsqlSpecial      false null true
 " Keywords
 syntax  keyword    gsqlKeyword      accum bag compress define directed distributed drop
 syntax  keyword    gsqlKeyword      edge filename for from graph header install job list
-syntax  keyword    gsqlKeyword      loading map primary_id post_accum post-accum print query return
+syntax  keyword    gsqlKeyword      loading map primary_id post_accum post-accum print query return gen-data
 syntax  keyword    gsqlKeyword      returns reverse_edge run select set stats temp_table to
 syntax  keyword    gsqlKeyword      tuple typedef undirected use using where with quote
-syntax  keyword    gsqlKeyword      values vertex user_defined_header separator
+syntax  keyword    gsqlKeyword      values vertex user_defined_header separator total_instance
 " Operators
 syntax  match      gsqlOperator     "\v/"
 syntax  match      gsqlOperator     "\v\+"
@@ -105,7 +105,7 @@ syntax  match      gsqlFunction     "\v(isdirected)\(@="
 " Statement
 syntax  keyword    gsqlStatement    alter delete drop grant select
 syntax  match      gsqlStatement    "\v<(replace|create)>"
-syntax  keyword    gsqlStatement    union intersect minus
+syntax  keyword    gsqlStatement    union intersect minus add max min
 " Control flow statements
 syntax  keyword    gsqlStatement    case do else end if then when while
 
