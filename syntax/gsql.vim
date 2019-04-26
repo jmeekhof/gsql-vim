@@ -18,12 +18,12 @@ syntax  match      gsqlError        "\v,(\_\s*[;\)])@=" "Comma before a closing 
 syntax  keyword    gsqlSpecial      false null true
 
 " Keywords
-syntax  keyword    gsqlKeyword      accum bag compress define directed distributed drop
-syntax  keyword    gsqlKeyword      edge filename for from graph header install job list
-syntax  keyword    gsqlKeyword      loading map primary_id post_accum post-accum print query return gen-data
-syntax  keyword    gsqlKeyword      returns reverse_edge run select set stats temp_table to
-syntax  keyword    gsqlKeyword      tuple typedef undirected use using where with quote
-syntax  keyword    gsqlKeyword      values vertex user_defined_header separator total_instance
+syntax  keyword    gsqlKeyword      accum bag compress define directed distributed drop edge filename for foreach
+syntax  keyword    gsqlKeyword      from gen-data graph header install job list loading map post\-accum primary_id
+syntax  keyword    gsqlKeyword      print query quote return returns reverse_edge run schema_change select
+syntax  keyword    gsqlKeyword      separator set stats temp_table to total_instance tuple typedef undirected use
+syntax  keyword    gsqlKeyword      user_defined_header using values vertex where with
+
 " Operators
 syntax  match      gsqlOperator     "\v/"
 syntax  match      gsqlOperator     "\v\+"
